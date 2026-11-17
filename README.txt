@@ -1,25 +1,31 @@
-ATHLETIC 180 — Prototype PWA V1
+ATHLETIC 180 V2 — application web personnelle
 
 Contenu :
-- index.html : interface
-- style.css : design responsive sombre
-- app.js : calendrier, séances, coches, suivi des données
-- manifest.webmanifest et sw.js : installation PWA et cache hors connexion
+- index.html : structure de l'application
+- style.css : interface responsive sombre
+- app.js : logique, programmation, suivi et stockage local
+- sw.js : cache hors connexion
+- manifest.webmanifest : configuration PWA
 
-Démarrage local :
-1. Décompresser le dossier.
-2. Pour tester, lancer un serveur HTTP local depuis ce dossier (par exemple : python -m http.server 8000).
-3. Ouvrir http://localhost:8000.
+Nouveautés V2 :
+- Planning corrigé : natation le jeudi, course le dimanche, vélo le samedi.
+- Accès direct à la séance du jour depuis Aujourd'hui.
+- Dashboard avec compteurs hebdomadaires entraînements et repas.
+- Validation du rituel quotidien par une seule case.
+- Calendrier : journée réalisée en surbrillance verte.
+- Sélecteur de cycles d'entraînement avec codes couleur.
+- Éditeur de séance : modifier, réordonner par glisser-déposer, ajouter et supprimer des exercices.
+- Champs de progression adaptés à la discipline.
+- Planificateur de repas sur 7 jours avec sélection des recettes et liste de courses recalculée.
+- Progression séparée : bilan physique, musculation, course, natation et vélo.
+- Mensurations : taille, hanches, fessiers, cuisse, épaules et bras.
+- Export JSON des données.
 
-Installation iPhone :
-1. Publier le dossier sur un hébergement HTTPS statique.
-2. Ouvrir l'URL dans Safari.
-3. Partager > Sur l'écran d'accueil.
-4. Ouvrir une première fois avec Internet pour mettre les fichiers en cache.
+Installation iPhone : héberger le dossier complet sur une URL HTTPS, ouvrir dans Safari, puis Partager > Sur l'écran d'accueil. Ouvrir une première fois en ligne pour installer le cache hors connexion.
 
-Limites V1 :
-- Les données sont stockées localement dans le navigateur (localStorage) et ne sont pas synchronisées.
-- Export JSON manuel disponible.
-- Les repas sont des exemples de structure, pas encore un menu complet calculé recette par recette.
-- Le calendrier présente une semaine type répétée ; la périodisation détaillée doit être injectée dans la version suivante.
-- Les données Apple Santé ne sont pas importées automatiquement.
+Données : stockage local dans le navigateur. Exporter régulièrement depuis le bouton Exporter. Aucune synchronisation cloud.
+
+Limites de cette version :
+- Les valeurs des repas et recettes sont des estimations de planification, à vérifier selon les marques et poids réellement consommés.
+- Les champs d'entraînement sont enregistrés dans l'historique local ; les graphiques affichent des tendances simples et ne remplacent pas une analyse physiologique.
+- Le glisser-déposer est prévu pour réordonner les exercices ; sur mobile, l'interaction peut dépendre du navigateur. Les boutons et champs restent utilisables.
